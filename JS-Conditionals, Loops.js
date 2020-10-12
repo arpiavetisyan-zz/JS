@@ -77,9 +77,10 @@
 //     alert("no")
 // }
 
-//  6. Given a number. 
-// Determine whether it consists of 2 digits and whether the first digit is greater than the second one. 
-// Print “yes” if it is, otherwise print “no”.
+// 6. Given a number.
+// Determine whether it consists of 2 digits and whether the first digit is greater than the second one.
+// Print“ yes”
+// if it is, otherwise print“ no”.
 
 // let a = 12;
 // let b = parseInt(a / 10);
@@ -90,3 +91,18 @@
 // } else {
 //     console.log("No")
 // }
+
+// 7. Given a number.Check
+// if the number is a multiple of 3, 5 or 7 and output an appropriate message.
+
+// let a = 105;
+// let three = (a % 3 === 0);
+// let five = (a % 5 === 0);
+// let seven = (a % 7 === 0);
+// let message = a + " is multiple of ";
+
+// message += three ? "3 " : "";
+// message += five ? "5 " : "";
+// message += seven ? "7 " : "";
+
+// console.log(message)
