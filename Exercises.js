@@ -28,9 +28,20 @@
 //     console.log(i)
 // }
 
-function printAmount() {
-    console.log(amount.toFixed(2));
+// function printAmount() {
+//     console.log(amount.toFixed(2));
+// }
+// var amount = 12.97;
+// amount = amount * 2;
+// printAmount();
+
+const tax_rate = 0.08;
+
+function calculateFinalPurchaseAmount(amt) {
+    amt = amt + (amt * tax_rate);
+    return amt;
 }
-var amount = 12.97;
-amount = amount * 2;
-printAmount();
+
+var amount = 10.99;
+amount = calculateFinalPurchaseAmount(amount);
+console.log(amount.toFixed(2))
