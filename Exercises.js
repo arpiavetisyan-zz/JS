@@ -35,13 +35,39 @@
 // amount = amount * 2;
 // printAmount();
 
-const tax_rate = 0.08;
+// const tax_rate = 0.08;
 
-function calculateFinalPurchaseAmount(amt) {
-    amt = amt + (amt * tax_rate);
-    return amt;
+// function calculateFinalPurchaseAmount(amt) {
+//     amt = amt + (amt * tax_rate);
+//     return amt;
+// }
+
+// var amount = 10.99;
+// amount = calculateFinalPurchaseAmount(amount);
+// console.log(amount.toFixed(2))
+
+// function one() {
+//     var a = 1;
+//     console.log(a);
+// }
+
+// function two() {
+//     var a = 2;
+//     console.log(a);
+// }
+
+// one()
+// two()
+
+function outer() {
+    var a = 1;
+
+    function inner() {
+        var b = 2;
+
+        console.log(a + b);
+    }
+    inner();
+    console.log(a);
 }
-
-var amount = 10.99;
-amount = calculateFinalPurchaseAmount(amount);
-console.log(amount.toFixed(2))
+outer()
