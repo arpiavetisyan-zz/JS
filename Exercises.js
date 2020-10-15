@@ -81,3 +81,35 @@
 
 // }
 // calculateFinalPurchaseAmount()
+
+const spendig_threshold = 200;
+const tax_rate = 0.08;
+const phone_price = 99.99;
+const accessory_price = 9.99;
+
+var bank_balance = 303.91;
+var amount = 0;
+
+function calculateTax(amount) {
+    return amount * tax_rate;
+}
+
+function formatAmount(amount) {
+    return "$" + amount.toFixed(2)
+}
+
+while (amount < bank_balance) {
+    amount = amount + phone_price;
+
+    if (amount < spendig_threshold) {
+        amount = amount + accessory_price;
+    }
+}
+
+amount = amount + calculateTax(amount);
+
+console.log("Your purchase: " + formatAmount(amount));
+
+if (amount > bank_balance) {
+    console.log("You can't afford this. :(");
+}
