@@ -106,3 +106,24 @@
 // message += seven ? "7 " : "";
 
 // console.log(message)
+
+// 8. Given an age. Figure out whether someone is a baby (1 months - 12 months), toddler (1 year - 2 years), 
+// child (3 years - 12 years), teenager (13 years - 17 years) or adult (18 years and more). 
+// Also check that age in months is between 1 and 12.
+
+let age = +prompt('Type the age between 1-100')
+let ageType = prompt('Type months or years')
+
+if (age <= 12 && ageType === 'months') {
+    console.log("baby")
+} else if (ageType === 'years') {
+    if (age <= 2) {
+        console.log("toddler")
+    } else if (age >= 3 && age <= 12) {
+        console.log("teenager")
+    } else if (age >= 13 && age <= 17) {
+        console.log("teenager")
+    } else if (age >= 18) {
+        console.log("adult")
+    }
+}
