@@ -112,6 +112,7 @@
 // Also check that age in months is between 1 and 12.
 
 let age = +prompt('Type the age between 1-100')
+console.log(age)
 let ageType = prompt('Type months or years')
 
 if (age <= 12 && ageType === 'months') {
@@ -119,11 +120,13 @@ if (age <= 12 && ageType === 'months') {
 } else if (ageType === 'years') {
     if (age <= 2) {
         console.log("toddler")
-    } else if (age >= 3 && age <= 12) {
+    } else if (age <= 12) {
+        console.log("child")
+    } else if (age <= 17) {
         console.log("teenager")
-    } else if (age >= 13 && age <= 17) {
-        console.log("teenager")
-    } else if (age >= 18) {
+    } else(age >= 18) {
         console.log("adult")
     }
+} else {
+    console.log('Error')
 }
