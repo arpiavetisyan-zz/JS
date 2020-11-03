@@ -1,0 +1,21 @@
+function sortByHeight(a) {
+    var treePos = [];
+    var heights = [];
+    for (var i = 0; i < a.length; i++) {
+        if (a[i] == -1) {
+            treePos.push(i);
+        } else {
+            heights.push(a[i]);
+        }
+    }
+    var sortedheights = heights.sort(function(aa, bb) {
+        return aa - bb;
+    })
+    for (var j = 0; j < a.length; j++) {
+        if (treePos.indexOf(j) !== -1) {
+            sortedheights.splice(j, 0, -1);
+        }
+    }
+    return sortedheights;
+
+}
