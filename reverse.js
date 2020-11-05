@@ -1,3 +1,5 @@
+debugger;
+
 function reverseInParentheses(inputString) {
     while (true) {
         let c = inputString.indexOf(")");
